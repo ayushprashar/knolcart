@@ -6,5 +6,5 @@ import scala.concurrent.ExecutionContext.Implicits.global
 trait ItemOperations {
   def searchItem(category: String,inventory: Map[Item,Int]): Future[Map[Item,Int]]
   def updateCount(item: Item,inventory: Map[Item,Int],updateBy: Int): Future[Map[Item,Int]]
-  def
+  def sortItems(inventory: Map[Item,Int],sortBy: String = "default"): Future[Map[Item,Int]]
 }
